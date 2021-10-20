@@ -1,4 +1,4 @@
-class Island Controller < ApplicationController
+class IslandController < ApplicationController
     def index 
         islands = Island.all
         render json: islands
