@@ -2,16 +2,22 @@ class CreateIslands < ActiveRecord::Migration[6.1]
   def change
     create_table :islands do |t|
       t.string :name 
-      t.string :villager1
-      t.string :villager2
-      t.string :villager3 
-      t.string :villager4
-      t.string :villager5
-      t.string :villager6
-      t.string :villager7
-      t.string :villager8
-      t.string :villager9
-      t.string :villager10
+      t.boolean :fossils
+      t.boolean :glowing_spot
+      t.boolean :able_shop 
+      t.boolean :nooks_cranny
+      t.boolean :collect_fruit
+      t.boolean :shake_trees
+      t.boolean :villager1
+      t.boolean :villager2
+      t.boolean :villager3
+      t.boolean :villager4
+      t.boolean :villager5
+      t.boolean :villager6
+      t.boolean :villager7
+      t.boolean :villager8
+      t.boolean :villager9
+      t.boolean :villager10
 
       t.timestamps
     end
