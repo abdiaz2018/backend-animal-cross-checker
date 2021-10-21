@@ -1,4 +1,9 @@
 class VillagersController < ApplicationController
+    def create 
+        villager = Villager.create(villager_params)
+        render json: villager
+    end
+
     def index
         villagers = Villager.all
         render json: villagers 
