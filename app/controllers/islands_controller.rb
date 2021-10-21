@@ -17,4 +17,9 @@ class IslandsController < ApplicationController
         render json: island
     end
 
+    def destroy
+        island = Island.find(params[:id])
+        island.destroy
+        render json: {message: 'Island Checklist Deleted'}
+    end
 end
