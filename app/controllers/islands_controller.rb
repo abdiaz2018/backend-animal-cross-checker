@@ -22,4 +22,10 @@ class IslandsController < ApplicationController
         island.destroy
         render json: {message: 'Island Checklist Deleted'}
     end
+
+    private
+
+    def island_params
+        params.require(:island).permit(:name, :fossils, :glowing_spot, :able_shop, :nooks_cranny,:collect_fruit, :shake_trees)
+    end
 end
