@@ -8,16 +8,6 @@ class CreateIslands < ActiveRecord::Migration[6.1]
       t.boolean :nooks_cranny
       t.boolean :collect_fruit
       t.boolean :shake_trees
-      t.boolean :villager1
-      t.boolean :villager2
-      t.boolean :villager3
-      t.boolean :villager4
-      t.boolean :villager5
-      t.boolean :villager6
-      t.boolean :villager7
-      t.boolean :villager8
-      t.boolean :villager9
-      t.boolean :villager10
 
       t.timestamps
     end
