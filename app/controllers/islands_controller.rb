@@ -7,4 +7,8 @@ class IslandsController < ApplicationController
             render json: {error: 'This island could not be created'}
         end
     end
+    def index 
+        islands = Island.all
+        render json: islands
+    end
 end
