@@ -5,8 +5,14 @@ class VillagersController < ApplicationController
     end
 
     def index
-        villagers = Villager.all
-        render json: villagers 
+        if params[:island_id]
+            island = Island.find(params[:island_id])
+            villagers = island.villagers
+            render json: villagers
+        else
+            villagers = Villager.all
+            render json: villagers 
+        end
     end
 
     private 
