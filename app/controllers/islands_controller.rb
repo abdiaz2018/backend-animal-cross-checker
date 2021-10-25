@@ -7,6 +7,12 @@ class IslandsController < ApplicationController
             render json: {error: 'This island could not be created'}
         end
     end
+
+    def edit 
+        island = Island.find(params[:id])
+        island.update(island_params)
+    end
+
     def index 
         islands = Island.all
         render json: islands
