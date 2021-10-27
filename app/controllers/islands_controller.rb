@@ -25,11 +25,6 @@ class IslandsController < ApplicationController
         end
     end
 
-    def edit 
-        island = Island.find(params[:id])
-        island.update(island_params)
-    end
-
     def index 
         islands = Island.all
         render json: islands
